@@ -1,0 +1,38 @@
+.estate-popup {
+    max-width: 300px;
+    padding: 10px;
+  }
+  
+  .estate-popup h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.2em;
+  }
+  
+  .estate-popup p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  
+  .estate-popup strong {
+    color: #34495e;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+  }
+  
+  .leaflet-popup-content {
+    margin: 13px;
+  }
+  
+  .map-container {
+    position: relative;
+  }
+  
+  .map-loading, .map-error {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }

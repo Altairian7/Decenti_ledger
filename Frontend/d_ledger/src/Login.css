@@ -1,0 +1,273 @@
+/* Base container styles */
+.auth-container {
+  background: linear-gradient(180deg, #006d3b 50%, #3a855d 80%);
+  border-radius: 20px;
+  padding: 50px;
+  width: 20%;
+  min-height: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Aboreto", serif;
+  margin-left: 5%;
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Roof style */
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 30px;
+  background-color: #006d3b;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Heading styles */
+.auth-container h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Form container */
+.auth-form {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Form elements */
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.auth-form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #3a855d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.auth-form button:hover {
+  background-color: #1e6d23;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text styles */
+.auth-form p {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.auth-form span {
+  color: #feecc7;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: underline;
+}
+
+.auth-form span:hover {
+  color: #fff;
+}
+
+/* Model container */
+.model-container {
+  width: 55%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* From Uiverse.io by adamgiebl */
+.form {
+  --input-focus: #e74c3c;
+  --font-color: #fff;
+  --font-color-sub: #ccc;
+  --bg-color: #2c3e50;
+  --main-color: #e74c3c;
+  padding: 20px;
+  background: #34495e;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+  height: 1000px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.title {
+  color: var(--font-color);
+  font-weight: 900;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.title span {
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.input {
+  width: 300px;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.login-with {
+  display: flex;
+  gap: 20px;
+}
+
+.button-log {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  color: var(--font-color);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--main-color);
+}
+
+.button-log:active,
+.button-confirm:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.button-confirm {
+  margin: 50px auto 0 auto;
+  width: 140px;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .auth-container {
+    width: 45%;
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .auth-container {
+    width: 50%;
+    margin-left: 3%;
+    padding: 30px;
+  }
+  
+  .model-container {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .auth-container {
+    width: 90%;
+    margin: 80px auto 20px;
+    min-height: 350px;
+  }
+
+  .model-container {
+    width: 100%;
+    height: 40vh;
+    order: 2;
+  }
+
+  .auth-container h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth-container {
+    width: 95%;
+    padding: 20px;
+    margin-top: 60px;
+    min-height: 300px;
+  }
+
+  .auth-container::before {
+    width: 80%;
+    height: 25px;
+    top: -25px;
+  }
+
+  .auth-form input,
+  .auth-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .auth-form p {
+    font-size: 12px;
+  }
+
+  .model-container {
+    height: 30vh;
+  }
+}

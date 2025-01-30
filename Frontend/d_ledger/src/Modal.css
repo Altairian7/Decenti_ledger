@@ -1,0 +1,92 @@
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end; /* Align modal to the right */
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .modal {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    height: 100vh;
+    width: 20%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    position: relative;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .modal-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .modal-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .modal-content {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .modal-content p {
+    margin-bottom: 12px;
+  }
+  
+  /* Estate Card Styles */
+  .estate-card {
+    background-color: rgb(228, 197, 197);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animation for Modal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile Responsive Design for Modal */
+  @media (max-width: 768px) {
+    .modal {
+      padding: 16px;
+      width: 90%; /* Reduce modal width on mobile */
+    }
+  
+    .modal-header h2 {
+      font-size: 20px;
+    }
+  
+    .modal-content {
+      font-size: 14px;
+    }
+  }
+  

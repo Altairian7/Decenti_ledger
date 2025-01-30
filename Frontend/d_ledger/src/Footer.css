@@ -1,0 +1,42 @@
+.footer {
+    background-color: rgba(245, 245, 220, 0.9);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    margin-top: auto;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .copyright {
+    color: #333;
+  }
+  
+  .contact {
+    color: #333;
+  }
+  
+  .contact a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }

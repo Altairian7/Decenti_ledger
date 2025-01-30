@@ -1,0 +1,56 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0; /* Align modal to the right */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;  /* Align modal content to the right */
+  align-items: flex-start;    /* Align modal content at the top */
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: transparent;
+  width: 400px;  /* You can adjust this width based on your requirements */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px 0 0 8px;  /* Rounded left corners */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+/* Close Button */
+.close-modal-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.close-modal-button:hover {
+  color: red;
+}
+
+/* Open Modal Button (styling for your buttons) */
+.open-modal-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.open-modal-button:hover {
+  background-color: #0056b3;
+}
